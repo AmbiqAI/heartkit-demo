@@ -1,15 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import "typeface-roboto"
 import reportWebVitals from './reportWebVitals';
+import { observer } from 'mobx-react-lite';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import { darkTheme } from './theme/theme';
+import './plugins';
+import './index.css';
+
+
+const AppContainer = observer(() => {
+  // const { server } = useStore();
+  return (
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+      <App />
+    </ThemeProvider>
+  )
+});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <AppContainer />
   </React.StrictMode>
 );
 
