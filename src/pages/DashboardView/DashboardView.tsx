@@ -32,7 +32,7 @@ const DashboardView = () => {
           </Grid>
 
           <Grid xs={12} md={6} lg={4}>
-            <Card elevation={2} sx={{height: 225}} >
+            <Card elevation={2} sx={{height: 250}} >
               <HeartChart
                 id={state.dataId}
                 heartRate={state.results.heartRate}
@@ -42,7 +42,7 @@ const DashboardView = () => {
           </Grid>
 
           <Grid xs={12} md={6} lg={4}>
-            <Card elevation={2} sx={{height: 225}} >
+            <Card elevation={2} sx={{height: 250}} >
               <BeatChart
                 id={state.dataId}
                 normBeats={state.results.numNormBeats}
@@ -53,7 +53,7 @@ const DashboardView = () => {
           </Grid>
 
           <Grid xs={12} md={6} lg={4}>
-            <Card elevation={1} sx={{height: 225}}>
+            <Card elevation={1} sx={{height: 250}}>
               <BeatsPlot id={state.dataId} ecg={state.data} beatIdxs={state.beatIdxs} />
             </Card>
           </Grid>

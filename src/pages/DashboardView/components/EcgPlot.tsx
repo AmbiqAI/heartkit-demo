@@ -21,7 +21,7 @@ interface Props {
   pvcIdxs: number[],
 }
 
-const EcgPlot = ({ ecg, segs, pacIdxs, pvcIdxs }: Props) => {
+const EcgPlot = ({ id, ecg, segs, pacIdxs, pvcIdxs }: Props) => {
 
   const data = useMemo(() => ({
     datasets: [
@@ -109,7 +109,7 @@ const EcgPlot = ({ ecg, segs, pacIdxs, pvcIdxs }: Props) => {
     tWaveSet.data = Array.from(segs, (s,i) => ({x:i, y: s === 3 ? ecg[i] : NaN}));
     chart.update('resize');
     return () => {};
-  }, [ecg, segs]);
+  }, [id]);
 
   return (
     <GridContainer>

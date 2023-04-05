@@ -41,8 +41,8 @@ const HeartChart = ({ heartRate, heartRhythm }: Props) => {
 
   return (
     <GridContainer>
-      <GridZStack level={0} style={{ paddingBottom: 0 }}>
-      <Stack width="90%" height="100%" >
+      <GridZStack level={0}>
+      <Stack width="90%" height="100%" py={1} pr={1} >
         <Doughnut
           // @ts-ignore
           ref={chartRef}
@@ -81,8 +81,8 @@ const HeartChart = ({ heartRate, heartRhythm }: Props) => {
       </GridZStack>
 
       <GridZStack level={1} style={{pointerEvents: 'none'}}>
-        <Stack direction="row" justifyContent='center' alignItems='center' textAlign='center' height='100%' width='90%' pr={2}>
-        <Typography variant='h3' fontWeight={900} component='div'>
+        <Stack justifyContent='center' alignItems='center' textAlign='center' height='100%' width='90%' py={1} pr={2}>
+        <Typography variant='h2' fontWeight={900}>
             {heartRate > 0 ? (
               <animated.div>
                 {number.to(n => n.toFixed(0))}
@@ -94,8 +94,8 @@ const HeartChart = ({ heartRate, heartRhythm }: Props) => {
       </GridZStack>
 
       <GridZStack level={1} style={{pointerEvents: 'none'}}>
-        <Stack direction="row" textAlign="center" justifyContent='center' alignItems='end' height='100%' width='90%' pr={2}>
-          <Typography variant='h5' component='div'>
+        <Stack textAlign="center" justifyContent='flex-end' alignItems='center' height='100%' width='90%' py={1} pr={1}>
+          <Typography variant='h4' >
             BPM
           </Typography>
         </Stack>
