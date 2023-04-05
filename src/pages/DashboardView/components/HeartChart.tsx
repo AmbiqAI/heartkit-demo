@@ -84,9 +84,9 @@ const HeartChart = ({ heartRate, heartRhythm }: Props) => {
         <Stack justifyContent='center' alignItems='center' textAlign='center' height='100%' width='90%' py={1} pr={2}>
         <Typography variant='h2' fontWeight={900}>
             {heartRate > 0 ? (
-              <animated.div>
+              <animated.text>
                 {number.to(n => n.toFixed(0))}
-              </animated.div> ) : (
+              </animated.text> ) : (
                 '--'
             )}
             </Typography>

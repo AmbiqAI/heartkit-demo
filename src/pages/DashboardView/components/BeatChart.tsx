@@ -81,12 +81,12 @@ const BeatChart = ({ normBeats, pacBeats, pvcBeats }: Props) => {
       </GridZStack>
 
       <GridZStack level={1} style={{pointerEvents: 'none'}}>
-        <Stack justifyContent='center' alignItems='center' textAlign='center' height='100%' width='90%' py={1} pr={2}>
+        <Stack justifyContent='center' alignItems='center' textAlign='center' height='100%' width='90%' py={1} pr={1}>
           <Typography variant='h2' fontWeight={900}>
             {numBeats > 0 ? (
-              <animated.div>
+              <animated.text>
                 {number.to(n => `${n.toFixed(0)}`)}
-              </animated.div> ) : (
+              </animated.text> ) : (
                 '--'
             )}
             </Typography>
