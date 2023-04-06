@@ -109,7 +109,7 @@ const EcgPlot = ({ id, ecg, segs, pacIdxs, pvcIdxs }: Props) => {
     tWaveSet.data = Array.from(segs, (s,i) => ({x:i, y: s === 3 ? ecg[i] : NaN}));
     chart.update('resize');
     return () => {};
-  }, [id]);
+  }, [id]);  // eslint-disable-line
 
   return (
     <GridContainer>
