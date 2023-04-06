@@ -15,12 +15,15 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
-
+      - name: NPM w/ cache
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
       - name: Install and Build 🔧
         run: |
           npm ci
           npm run build
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
