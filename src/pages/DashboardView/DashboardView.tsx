@@ -25,6 +25,7 @@ const DashboardView = () => {
                 id={state.dataId}
                 ecg={state.data}
                 segs={state.segMask}
+                normIdxs={state.normalBeatIdxs}
                 pacIdxs={state.pacBeatIdxs}
                 pvcIdxs={state.pvcBeatIdxs}
               />

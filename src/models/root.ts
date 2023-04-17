@@ -39,6 +39,13 @@ const HeartKitState = types
 
 }))
 .views(self => ({
+    get normalBeatIdxs() {
+        const idxs = [];
+        for (const beatIdx of self.beatIdxs) {
+            if ((self.segMask[beatIdx] >> 4) === 1) { idxs.push(beatIdx); }
+        }
+        return idxs;
+    },
     get pacBeatIdxs() {
         const idxs = [];
         for (const beatIdx of self.beatIdxs) {

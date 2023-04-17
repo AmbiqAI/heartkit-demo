@@ -17,11 +17,12 @@ interface Props {
   id: number,
   ecg: number[],
   segs: number[],
+  normIdxs: number[],
   pacIdxs: number[],
   pvcIdxs: number[],
 }
 
-const EcgPlot = ({ id, ecg, segs, pacIdxs, pvcIdxs }: Props) => {
+const EcgPlot = ({ id, ecg, segs, normIdxs, pacIdxs, pvcIdxs }: Props) => {
 
   const data = useMemo(() => ({
     datasets: [
@@ -59,11 +60,23 @@ const EcgPlot = ({ id, ecg, segs, pacIdxs, pvcIdxs }: Props) => {
 
   const annotations = useMemo(() => {
     return [
+      ...normIdxs.map((i) => ({
+        drawTime: 'afterDatasetsDraw',
+        type: 'line',
+        value: i,
+        borderColor: 'rgb(123,194,237)',
+        scaleID: 'x',
+        borderDash: [5, 5],
+        borderWidth: 2,
+        label: {
+          display: false,
+        }
+      })),
       ...pacIdxs.map((i) => ({
         drawTime: 'afterDatasetsDraw',
         type: 'line',
         value: i,
-        borderColor: '#ccc',
+        borderColor: 'rgb(189,82,195)',
         scaleID: 'x',
         borderDash: [5, 5],
         borderWidth: 2,
@@ -78,7 +91,7 @@ const EcgPlot = ({ id, ecg, segs, pacIdxs, pvcIdxs }: Props) => {
         drawTime: 'afterDatasetsDraw',
         type: 'line',
         value: i,
-        borderColor: '#ccc',
+        borderColor: 'rgb(253,79,44)',
         scaleID: 'x',
         borderDash: [5, 5],
         borderWidth: 2,
