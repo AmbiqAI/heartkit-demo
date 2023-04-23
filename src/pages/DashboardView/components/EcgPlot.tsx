@@ -103,7 +103,7 @@ const EcgPlot = ({ id, ecg, segs, normIdxs, pacIdxs, pvcIdxs }: Props) => {
         }
       })),
     ];
-  }, [pacIdxs, pvcIdxs]);
+  }, [normIdxs, pacIdxs, pvcIdxs]);
 
   const chartRef = useRef<Chart>();
 

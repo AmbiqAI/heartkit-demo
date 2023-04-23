@@ -1,7 +1,7 @@
 import Header from '../../../components/Header';
 import { Toolbar, Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import { AmbiqIcon, HeartKitIcon } from '../../../assets/icons';
+import { HeartKitIcon, NeuralSpotIcon } from '../../../assets/icons';
 import { observer } from 'mobx-react-lite';
 import { PulsedDiv } from '../../../components/utils';
 
@@ -14,19 +14,18 @@ const DashboardHeader = ({ appState }: Props) => {
   return (
       <Header>
         <Toolbar>
-            <PulsedDiv>
-              <HeartKitIcon fontSize='large' sx={{mr: 1}} />
-            </PulsedDiv>
+
+          <PulsedDiv>
+            <HeartKitIcon fontSize='large' sx={{mr: 1}} />
+          </PulsedDiv>
           <Typography variant='h5' component='div' sx={{flexGrow: 1}}>
-            Live Heart Kit Demo
+            Live HeartKit Demo
           </Typography>
+
           <Box sx={{ flexGrow: 1 }} />
 
           <Box alignItems='center' sx={{ display: 'flex' }}>
-            <Typography variant='h5' component='div' sx={{flexGrow: 1}}>
-              neuralSPOT
-            </Typography>
-            <AmbiqIcon fontSize='large' sx={{ml: 1, color: 'white'}} />
+            <NeuralSpotIcon sx={{height: '36px', width: 'auto' }} />
           </Box>
 
         </Toolbar>

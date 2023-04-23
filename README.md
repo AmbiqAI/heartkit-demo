@@ -1,6 +1,6 @@
-# Heart Kit Demo
+# HeartKit Demo
 
-A front-end web app for Heart Kit demonstrator.
+A front-end web app for HeartKit demonstrator.
 
 ![](./docs/assets/heart-kit-app.png)
 
