@@ -5,6 +5,18 @@
   "author": "Adam Page <adam.page@ambiq.com>",
   "license": "BSD-3-Clause",
   "private": true,
+  "bin": "app.js",
+  "pkg": {
+    "scripts": [
+      "app.js",
+      "build/**/*.js"
+    ],
+    "assets": [
+      "public/**/*",
+      "build/**/*",
+      "build/static/**/*"
+    ]
+  },
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
