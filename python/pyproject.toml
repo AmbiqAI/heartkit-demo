@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "heartkit"
+version = "1.0.0"
+description = "AI driven heart monitoring kit for ultra low-power wearables."
+license = "BSD-3-Clause"
+authors = ["Adam Page <adam.page@ambiq.com>"]
+readme = "README.md"
+homepage = "https://ambiq.ai"
+packages = [
+    { include = "heartkit" },
+    { include = "neuralspot" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+numpy = "^1.23.0"
+fastapi = "^0.95.0"
+uvicorn = "^0.21.1"
+requests = "^2.28.2"
+pydantic = "^1.10.2"
+erpc = {git = "https://github.com/AmbiqAI/erpc.git", rev = "develop", subdirectory = "erpc_python"}
+pyserial = "^3.5"
+plotext = "^5.2.7"
+rich = "^12.5.1"
+orjson = "^3.8.9"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+
+reportShadowedImports = "none"
