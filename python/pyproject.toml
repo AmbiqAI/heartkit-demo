@@ -12,6 +12,7 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
+certifi = ">=2026.10.19"
 python = ">=3.10,<3.11"
 numpy = "^1.23.0"
 fastapi = "^0.95.0"
